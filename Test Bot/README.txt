@@ -1,5 +1,6 @@
 Tässä tehty botti discord servulle, joka kuuntelee komentoa "ping" ja "apina". Botti myös asettaa servellu liittyjille roolin
 "jäsen" ja toivottaa heidät tervetulleiksi tekstikanavalla. Sen lisäksi botti soittaa youtube vidoita äänikanavilla.
+Koodissa käytetty vanhaa botin tokenia, joten tätä bottia ette pääse muokkaamaan.
 Node modules ei mahtanut mukaan, joten jos haluat käyttää bottia paikallisesti lataa ne käyttämällä:
 "npm install @discordjs/opus ffmpeg-static yt-search ytdl-core" 
 
