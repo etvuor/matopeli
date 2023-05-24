@@ -1,6 +1,7 @@
 use rand::Rng;
 use num_traits::NumAssign;
 use std::ops::Range;
+use num_traits::{NumAssign, Num};
 
 // Define a generic Position struct
 #[derive(Debug, Clone, Copy)]
