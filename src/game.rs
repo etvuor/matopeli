@@ -5,7 +5,7 @@ pub use crate::{
     unit::{Player, PlayerBuilder},
 };
 mod traits;
-use crate::traits::*;
+use num::traits::*;
 
 pub struct Game {
     enemies: Vec<Enemy>,
