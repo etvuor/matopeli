@@ -1,11 +1,14 @@
 pub mod player;
-pub mod collectible;
-pub mod enemy;
-pub mod wall;
-pub mod player_builder; // Update this line
-
+pub mod player_builder;
 pub use player::Player;
-pub use collectible::Collectible;
+pub use player_builder::PlayerBuilder;
+
+pub mod enemy;
 pub use enemy::Enemy;
+
+pub mod collectible;
+pub use collectible::Collectible;
+
+pub mod wall;
 pub use wall::Wall;
-pub use player_builder::PlayerBuilder; // Add this line
+
