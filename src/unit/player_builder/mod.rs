@@ -1,35 +1,35 @@
-use crate::unit::player::Player;
-use crate::unit::player::position as player;
+use super::Player;
 
 pub struct PlayerBuilder {
-    health: u32,
-    position: (u32, u32),
+    speed: f64,
+    health: u8,
 }
 
 impl PlayerBuilder {
     pub fn new() -> Self {
-        PlayerBuilder {
-            health: 100,
-            position: (0, 0),
+        Self {
+            speed: 0.0,
+            health: 0,
         }
     }
 
-    pub fn health(&mut self, health: u32) -> &mut Self {
+    pub fn speed(mut self, speed: f64) -> Self {
+        self.speed = speed;
+        self
+    }
+
+    pub fn health(mut self, health: u8) -> Self {
         self.health = health;
         self
     }
 
-    pub fn position(&mut self, position: (u32, u32)) -> &mut Self {
-        self.position = position;
-        self
-    }
-
-    pub fn build(&self) -> Player<f64> {
-        Player::new(
-            self.health,
-            player::Position::new(self.position.0.into(), self.position.1.into()),
-        )
+    pub fn build(self) -> Player {
+        Player {
+            speed: self.speed,
+            health: self.health as u32,
+        }
     }
 }
+
 
 
